@@ -2,40 +2,69 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.empty import EmptyOperator
 from airflow.operators.python import PythonOperator
+from scripts.bronze.main import execute_bronze_layer
+from scripts.silver.main import process_bronze_to_silver
+from scripts.gold.main import process_silver_to_gold
+from scripts.database_operations.main import main as upload_to_postgres
 
+# Define default arguments
 default_args = {
-    "owner": "alec.ventura",
+    "owner": "alec.ventura, ricardo.motta", 
     "start_date": datetime(2024, 10, 1),
+    "retries": 1,
+    "retry_delay": timedelta(minutes=5)
 }
 
-datasets = [
-    'fmcsa_complaints.csv',
-    'fmcsa_safer_data.csv',
-    'fmcsa_company_snapshot.csv',
-    'fmcsa_companies.csv',
-    'customer_reviews_google.csv',
-    'company_profiles_google_maps.csv'
+# Define the main DAG
+with DAG(
+    "clever_main_DAG",
+    default_args=default_args,
+    catchup=False,
+    schedule_interval='20 0 * * *',  # Runs daily at 00:20
+    max_active_runs=1
+) as dag:
 
-]
+    # Start task
+    start_task = EmptyOperator(task_id='Start')
 
-with DAG("clever_main_DAG", default_args=default_args, catchup=False, schedule_interval='20 0 * * *', max_active_runs=1) as dag:
+    # Task to execute the BRONZE layer
+    save_to_bronze_task = PythonOperator(
+        task_id='save_raw_files_to_bronze',
+        python_callable=execute_bronze_layer,
+        execution_timeout=timedelta(minutes=10)
+    )
 
-    start_task = EmptyOperator(task_id='Start', dag=dag)
-    finish_task = EmptyOperator(task_id='Finish', dag=dag)
+    # Task to process the SILVER layer
+    process_silver_task = PythonOperator(
+        task_id='process_bronze_to_silver',
+        python_callable=process_bronze_to_silver,
+        op_kwargs={
+            'bronze_dir': '/opt/airflow/data/BRONZE',
+            'silver_dir': '/opt/airflow/data/SILVER'
+        },
+        execution_timeout=timedelta(minutes=10)
+    )
 
-    for file in datasets:
-        file_without_extension = file.split('.')[0]
+    # Task to process the GOLD layer
+    process_gold_task = PythonOperator(
+        task_id='process_silver_to_gold',
+        python_callable=process_silver_to_gold,
+        op_kwargs={
+            'silver_dir': '/opt/airflow/data/SILVER',
+            'gold_dir': '/opt/airflow/data/GOLD'
+        },
+        execution_timeout=timedelta(minutes=10)
+    )
 
-        task_id = f"upload_to_postgres_{file_without_extension}"
-        upload_to_postgres_task = PythonOperator(
-            task_id=task_id,
-            python_callable=upload_to_postgres,
-            dag=dag,
-            execution_timeout=timedelta(milliseconds=2),
-            op_kwargs={
-                "file_name": file
-            }
-        )
+    # Task to upload data to Postgres
+    upload_to_postgres_task = PythonOperator(
+        task_id='upload_to_postgres',
+        python_callable=upload_to_postgres,
+        execution_timeout=timedelta(minutes=10)
+    )
 
-        start_task.set_downstream(upload_to_postgres_task)
-        upload_to_postgres_task.set_downstream(finish_task)
+    # Finish task
+    finish_task = EmptyOperator(task_id='Finish')
+
+    # Define task relationships
+    start_task >> save_to_bronze_task >> process_silver_task >> process_gold_task >> upload_to_postgres_task >> finish_task

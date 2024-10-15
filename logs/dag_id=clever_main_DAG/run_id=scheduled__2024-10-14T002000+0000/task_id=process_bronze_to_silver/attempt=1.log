@@ -1,0 +1,33 @@
+[2024-10-15T03:02:31.635+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clever_main_DAG.process_bronze_to_silver scheduled__2024-10-14T00:20:00+00:00 [queued]>
+[2024-10-15T03:02:31.648+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clever_main_DAG.process_bronze_to_silver scheduled__2024-10-14T00:20:00+00:00 [queued]>
+[2024-10-15T03:02:31.649+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2024-10-15T03:02:31.679+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): process_bronze_to_silver> on 2024-10-14 00:20:00+00:00
+[2024-10-15T03:02:31.693+0000] {standard_task_runner.py:57} INFO - Started process 2382 to run task
+[2024-10-15T03:02:31.697+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'clever_main_DAG', 'process_bronze_to_silver', 'scheduled__2024-10-14T00:20:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/clever_main_DAG.py', '--cfg-path', '/tmp/tmp3vyrpg8m']
+[2024-10-15T03:02:31.698+0000] {standard_task_runner.py:85} INFO - Job 7: Subtask process_bronze_to_silver
+[2024-10-15T03:02:31.769+0000] {task_command.py:410} INFO - Running <TaskInstance: clever_main_DAG.process_bronze_to_silver scheduled__2024-10-14T00:20:00+00:00 [running]> on host 0d4cebb48579
+[2024-10-15T03:02:31.869+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='alec.ventura, ricardo.motta' AIRFLOW_CTX_DAG_ID='clever_main_DAG' AIRFLOW_CTX_TASK_ID='process_bronze_to_silver' AIRFLOW_CTX_EXECUTION_DATE='2024-10-14T00:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-14T00:20:00+00:00'
+[2024-10-15T03:02:31.873+0000] {logging_mixin.py:149} INFO - Performing processing for entity: company_profiles_google_maps
+[2024-10-15T03:02:35.373+0000] {logging_mixin.py:149} INFO - Columns deleted (all rows null): ['popular_times', 'typical_time_spent', 'reservation_links', 'menu_link']
+[2024-10-15T03:02:35.378+0000] {logging_mixin.py:149} INFO - Total columns deleted: 4
+[2024-10-15T03:02:35.746+0000] {logging_mixin.py:149} INFO - Total empty or duplicate rows removed: 0
+[2024-10-15T03:02:35.959+0000] {util.py:2007} INFO - Could not find local context root directory
+[2024-10-15T03:02:35.961+0000] {base.py:2134} INFO - Created temporary directory '/tmp/tmp2rjegcgo' for ephemeral docs site
+[2024-10-15T03:02:35.966+0000] {abstract_data_context.py:5575} INFO - EphemeralDataContext has not implemented `_load_fluent_config()` returning empty `GxConfig`
+[2024-10-15T03:02:35.970+0000] {config.py:185} INFO - Loading 'datasources' ->
+[]
+[2024-10-15T03:02:36.024+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/scripts/silver/main.py", line 33, in process_bronze_to_silver
+    validation_result = validate_data(df_transformed, entity)
+  File "/opt/airflow/dags/scripts/silver/utils/validations.py", line 16, in validate_data
+    data_source = context.data_sources.add_pandas("pandas")
+AttributeError: 'EphemeralDataContext' object has no attribute 'data_sources'
+[2024-10-15T03:02:36.049+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=clever_main_DAG, task_id=process_bronze_to_silver, execution_date=20241014T002000, start_date=20241015T030231, end_date=20241015T030236
+[2024-10-15T03:02:36.080+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 7 for task process_bronze_to_silver ('EphemeralDataContext' object has no attribute 'data_sources'; 2382)
+[2024-10-15T03:02:36.124+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2024-10-15T03:02:36.166+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,338 @@
+[2024-10-14T23:42:21.605+0000] {processor.py:157} INFO - Started process (PID=39) to work on /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:42:21.620+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/clever_main_DAG.py for tasks to queue
+[2024-10-14T23:42:21.632+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:42:21.631+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:42:21.974+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:42:21.910+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/clever_main_DAG.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/clever_main_DAG.py", line 47, in <module>
+    from dags.scripts.save_to_bronze import save_raw_files_to_bronze
+ModuleNotFoundError: No module named 'dags'
+[2024-10-14T23:42:21.981+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:42:22.123+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/clever_main_DAG.py took 0.547 seconds
+[2024-10-14T23:42:52.498+0000] {processor.py:157} INFO - Started process (PID=47) to work on /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:42:52.507+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/clever_main_DAG.py for tasks to queue
+[2024-10-14T23:42:52.516+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:42:52.515+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:42:52.699+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:42:52.631+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/clever_main_DAG.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/clever_main_DAG.py", line 47, in <module>
+    from dags.scripts.save_to_bronze import save_raw_files_to_bronze
+ModuleNotFoundError: No module named 'dags'
+[2024-10-14T23:42:52.705+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:42:53.124+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/clever_main_DAG.py took 0.700 seconds
+[2024-10-14T23:43:35.907+0000] {processor.py:157} INFO - Started process (PID=55) to work on /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:43:41.484+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/clever_main_DAG.py for tasks to queue
+[2024-10-14T23:43:59.084+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:43:42.353+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:44:17.993+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:44:17.817+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/clever_main_DAG.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/clever_main_DAG.py", line 47, in <module>
+    from dags.scripts.save_to_bronze import save_raw_files_to_bronze
+ModuleNotFoundError: No module named 'dags'
+[2024-10-14T23:44:18.006+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:44:51.254+0000] {processor.py:157} INFO - Started process (PID=63) to work on /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:44:51.267+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/clever_main_DAG.py for tasks to queue
+[2024-10-14T23:44:51.296+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:44:51.295+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:44:51.526+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:44:51.484+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/clever_main_DAG.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/clever_main_DAG.py", line 47, in <module>
+    from dags.scripts.save_to_bronze import save_raw_files_to_bronze
+ModuleNotFoundError: No module named 'dags'
+[2024-10-14T23:44:51.533+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:44:51.915+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/clever_main_DAG.py took 0.913 seconds
+[2024-10-14T23:45:22.804+0000] {processor.py:157} INFO - Started process (PID=71) to work on /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:45:22.814+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/clever_main_DAG.py for tasks to queue
+[2024-10-14T23:45:22.819+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:45:22.818+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:45:22.966+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:45:22.919+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/clever_main_DAG.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/clever_main_DAG.py", line 47, in <module>
+    from dags.scripts.save_to_bronze import save_raw_files_to_bronze
+ModuleNotFoundError: No module named 'dags'
+[2024-10-14T23:45:22.970+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:48:11.291+0000] {processor.py:157} INFO - Started process (PID=72) to work on /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:48:11.296+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/clever_main_DAG.py for tasks to queue
+[2024-10-14T23:48:11.304+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:48:11.304+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:48:11.401+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:48:11.368+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/clever_main_DAG.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/clever_main_DAG.py", line 47, in <module>
+    from dags.scripts.save_to_bronze import save_raw_files_to_bronze
+ModuleNotFoundError: No module named 'dags'
+[2024-10-14T23:48:11.405+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:48:22.810+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "postgres_airflow" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 162, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 842, in process_file
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api_internal/internal_api_call.py", line 112, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 620, in update_import_errors
+    existing_import_error_files = [x.filename for x in session.query(errors.ImportError.filename).all()]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2773, in all
+    return self._iter().all()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "postgres_airflow" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2024-10-14T23:51:50.467+0000] {processor.py:157} INFO - Started process (PID=73) to work on /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:51:50.608+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/clever_main_DAG.py for tasks to queue
+[2024-10-14T23:51:50.961+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:51:50.757+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:51:51.951+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:51:51.687+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/clever_main_DAG.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/clever_main_DAG.py", line 47, in <module>
+    from dags.scripts.save_to_bronze import save_raw_files_to_bronze
+ModuleNotFoundError: No module named 'dags'
+[2024-10-14T23:51:52.034+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:52:02.448+0000] {processor.py:182} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "postgres_airflow" to address: Temporary failure in name resolution
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 178, in _run_file_processor
+    _handle_dag_file_processing()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 162, in _handle_dag_file_processing
+    callback_requests=callback_requests,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 76, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 842, in process_file
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/api_internal/internal_api_call.py", line 112, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/dag_processing/processor.py", line 620, in update_import_errors
+    existing_import_error_files = [x.filename for x in session.query(errors.ImportError.filename).all()]
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2773, in all
+    return self._iter().all()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/query.py", line 2919, in _iter
+    execution_options={"_sa_orm_load_options": self.load_options},
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1716, in execute
+    conn = self._connection_for_bind(bind)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 1556, in _connection_for_bind
+    engine, execution_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/orm/session.py", line 750, in _connection_for_bind
+    conn = bind.connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3320, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3399, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3370, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2204, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3366, in _wrap_pool_connect
+    return fn()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 327, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 894, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 493, in checkout
+    rec = pool._do_get()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 273, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 388, in __init__
+    self.__connect()
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 691, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 211, in raise_
+    raise exception
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 686, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 574, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 598, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/airflow/.local/lib/python3.7/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+sqlalchemy.exc.OperationalError: (psycopg2.OperationalError) could not translate host name "postgres_airflow" to address: Temporary failure in name resolution
+
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+[2024-10-14T23:53:01.475+0000] {processor.py:157} INFO - Started process (PID=74) to work on /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:53:01.482+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/clever_main_DAG.py for tasks to queue
+[2024-10-14T23:53:01.495+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:53:01.494+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:53:01.599+0000] {logging_mixin.py:149} INFO - [2024-10-14T23:53:01.578+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/clever_main_DAG.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/clever_main_DAG.py", line 47, in <module>
+    from dags.scripts.save_to_bronze import save_raw_files_to_bronze
+ModuleNotFoundError: No module named 'dags'
+[2024-10-14T23:53:01.602+0000] {processor.py:838} WARNING - No viable dags retrieved from /opt/airflow/dags/clever_main_DAG.py
+[2024-10-14T23:53:01.846+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/clever_main_DAG.py took 0.430 seconds

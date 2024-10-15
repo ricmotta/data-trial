@@ -1,0 +1,33 @@
+[2024-10-15T11:33:36.877+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clever_main_DAG.process_silver_to_gold manual__2024-10-15T02:39:24.853796+00:00 [queued]>
+[2024-10-15T11:33:36.891+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clever_main_DAG.process_silver_to_gold manual__2024-10-15T02:39:24.853796+00:00 [queued]>
+[2024-10-15T11:33:36.891+0000] {taskinstance.py:1308} INFO - Starting attempt 6 of 7
+[2024-10-15T11:33:36.909+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): process_silver_to_gold> on 2024-10-15 02:39:24.853796+00:00
+[2024-10-15T11:33:36.921+0000] {standard_task_runner.py:57} INFO - Started process 638 to run task
+[2024-10-15T11:33:36.925+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'clever_main_DAG', 'process_silver_to_gold', 'manual__2024-10-15T02:39:24.853796+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/clever_main_DAG.py', '--cfg-path', '/tmp/tmpqe89yud3']
+[2024-10-15T11:33:36.927+0000] {standard_task_runner.py:85} INFO - Job 45: Subtask process_silver_to_gold
+[2024-10-15T11:33:36.999+0000] {task_command.py:410} INFO - Running <TaskInstance: clever_main_DAG.process_silver_to_gold manual__2024-10-15T02:39:24.853796+00:00 [running]> on host 0d4cebb48579
+[2024-10-15T11:33:37.117+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='alec.ventura, ricardo.motta' AIRFLOW_CTX_DAG_ID='clever_main_DAG' AIRFLOW_CTX_TASK_ID='process_silver_to_gold' AIRFLOW_CTX_EXECUTION_DATE='2024-10-15T02:39:24.853796+00:00' AIRFLOW_CTX_TRY_NUMBER='6' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-15T02:39:24.853796+00:00'
+[2024-10-15T11:33:37.334+0000] {logging_mixin.py:149} INFO - df_profiles: (5865, 49)
+[2024-10-15T11:33:38.093+0000] {logging_mixin.py:149} INFO - df_reviews: (12039, 27)
+[2024-10-15T11:33:38.339+0000] {logging_mixin.py:149} INFO - df_joined_google: (17818, 75)
+[2024-10-15T11:33:38.643+0000] {logging_mixin.py:149} INFO - df_joined_google_suf: (17818, 68)
+[2024-10-15T11:33:38.838+0000] {logging_mixin.py:149} INFO - df_classified:                                    google_id  ... performance_score
+17602  0x88d9c7fa6addb759:0xb3b1e5a85f838ed7  ...          0.892392
+17670  0x88d9ea8bc8dd24c5:0xa969832b22de2e00  ...          0.778368
+14921  0x88d9b7a44b3d23e7:0xf21d3381583790b6  ...          0.737772
+16406  0x88d9c0fa56d8048b:0xf1bdb39f000dbca9  ...          0.688824
+15443  0x88d9b92525655e3f:0xb749f9ee6297c992  ...          0.672631
+...                                      ...  ...               ...
+17179   0x88d9c70066037a73:0xfaa6ee32034f590  ...          0.000000
+17703  0x88f53089ffe603e9:0x31f4ab1226162015  ...          0.000000
+13591  0x88d9b681456ffffd:0xe47368f01f3c23c8  ...          0.000000
+16887  0x88d9c3dee02c6225:0x70e664bf1a713f44  ...          0.000000
+17174  0x88d9c6f3ab556acf:0xe885467a0db86e18  ...          0.000000
+
+[2864 rows x 72 columns]
+[2024-10-15T11:33:38.961+0000] {logging_mixin.py:149} INFO - GOLD file does not exist. Inserting new data.
+[2024-10-15T11:33:39.305+0000] {logging_mixin.py:149} INFO - GOLD file does not exist. Inserting new data.
+[2024-10-15T11:33:39.453+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-10-15T11:33:39.472+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=clever_main_DAG, task_id=process_silver_to_gold, execution_date=20241015T023924, start_date=20241015T113336, end_date=20241015T113339
+[2024-10-15T11:33:39.548+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2024-10-15T11:33:39.587+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

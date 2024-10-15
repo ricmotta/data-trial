@@ -1,0 +1,71 @@
+[2024-10-15T11:12:44.972+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clever_main_DAG.upload_to_postgres manual__2024-10-15T02:39:24.853796+00:00 [queued]>
+[2024-10-15T11:12:45.012+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clever_main_DAG.upload_to_postgres manual__2024-10-15T02:39:24.853796+00:00 [queued]>
+[2024-10-15T11:12:45.013+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2024-10-15T11:12:45.056+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): upload_to_postgres> on 2024-10-15 02:39:24.853796+00:00
+[2024-10-15T11:12:45.065+0000] {standard_task_runner.py:57} INFO - Started process 152 to run task
+[2024-10-15T11:12:45.070+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'clever_main_DAG', 'upload_to_postgres', 'manual__2024-10-15T02:39:24.853796+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/clever_main_DAG.py', '--cfg-path', '/tmp/tmptba4rhgi']
+[2024-10-15T11:12:45.074+0000] {standard_task_runner.py:85} INFO - Job 37: Subtask upload_to_postgres
+[2024-10-15T11:12:45.212+0000] {task_command.py:410} INFO - Running <TaskInstance: clever_main_DAG.upload_to_postgres manual__2024-10-15T02:39:24.853796+00:00 [running]> on host 0d4cebb48579
+[2024-10-15T11:12:45.417+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='alec.ventura, ricardo.motta' AIRFLOW_CTX_DAG_ID='clever_main_DAG' AIRFLOW_CTX_TASK_ID='upload_to_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-10-15T02:39:24.853796+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-15T02:39:24.853796+00:00'
+[2024-10-15T11:12:45.419+0000] {logging_mixin.py:149} INFO - Processing parquet file: ./data/GOLD/real_estate_agents_classified/real_estate_agents_classified.parquet
+[2024-10-15T11:12:45.594+0000] {logging_mixin.py:149} INFO - Parquet file read successfully. Number of rows: 2864, Number of columns: 72
+[2024-10-15T11:12:45.607+0000] {logging_mixin.py:149} INFO - Data types of the columns in the DataFrame:
+google_id             object
+name                  object
+site                  object
+subtypes              object
+type                  object
+                      ...   
+review_likes           Int64
+rating_scaled        float64
+reviews_scaled       float64
+photos_scaled        float64
+performance_score    float64
+Length: 72, dtype: object
+[2024-10-15T11:12:45.614+0000] {logging_mixin.py:149} INFO - Checking if table google_agents_data exists...
+[2024-10-15T11:12:45.813+0000] {logging_mixin.py:149} INFO - Checking if GOLD data is newer than the current data in google_agents_data...
+[2024-10-15T11:12:45.882+0000] {logging_mixin.py:149} INFO - GOLD data is newer. Performing UPSERT.
+[2024-10-15T11:12:47.923+0000] {logging_mixin.py:149} INFO - Data UPSERT completed for table google_agents_data.
+[2024-10-15T11:12:47.924+0000] {logging_mixin.py:149} INFO - Fetching first 5 rows from table: google_agents_data
+[2024-10-15T11:12:48.058+0000] {logging_mixin.py:149} INFO -                                google_id  ...                 updated_at
+0  0x88d9c7fa6addb759:0xb3b1e5a85f838ed7  ... 2024-10-15 11:12:45.891891
+1  0x88d9ea8bc8dd24c5:0xa969832b22de2e00  ... 2024-10-15 11:12:45.891891
+2  0x88d9b7a44b3d23e7:0xf21d3381583790b6  ... 2024-10-15 11:12:45.891891
+3  0x88d9c0fa56d8048b:0xf1bdb39f000dbca9  ... 2024-10-15 11:12:45.891891
+4  0x4cf0f22efa28cb65:0xba283f4346f882b1  ... 2024-10-15 11:12:45.891891
+
+[5 rows x 73 columns]
+[2024-10-15T11:12:48.060+0000] {logging_mixin.py:149} INFO - Processing of parquet file ./data/GOLD/real_estate_agents_classified/real_estate_agents_classified.parquet completed.
+[2024-10-15T11:12:48.062+0000] {logging_mixin.py:149} INFO - Processing parquet file: ./data/GOLD/fmcsa_company_data/fmcsa_company_data.parquet
+[2024-10-15T11:12:48.088+0000] {logging_mixin.py:149} INFO - Parquet file read successfully. Number of rows: 829, Number of columns: 75
+[2024-10-15T11:12:48.090+0000] {logging_mixin.py:149} INFO - Data types of the columns in the DataFrame:
+usdot_num                                          Int64
+user_created                                      object
+date_created                         datetime64[ns, UTC]
+user_updated                                      object
+date_updated                         datetime64[ns, UTC]
+                                            ...         
+carrier_safety_rating_review_date                 object
+carrier_safety_rating_rating                      object
+carrier_safety_rating_type                        object
+mileage                                            Int64
+mileage_year                                      object
+Length: 75, dtype: object
+[2024-10-15T11:12:48.093+0000] {logging_mixin.py:149} INFO - Checking if table fmcsa_data exists...
+[2024-10-15T11:12:48.096+0000] {logging_mixin.py:149} INFO - Checking if GOLD data is newer than the current data in fmcsa_data...
+[2024-10-15T11:12:48.102+0000] {logging_mixin.py:149} INFO - GOLD data is newer. Performing UPSERT.
+[2024-10-15T11:12:48.615+0000] {logging_mixin.py:149} INFO - Data UPSERT completed for table fmcsa_data.
+[2024-10-15T11:12:48.616+0000] {logging_mixin.py:149} INFO - Fetching first 5 rows from table: fmcsa_data
+[2024-10-15T11:12:48.738+0000] {logging_mixin.py:149} INFO -    usdot_num  ...                 updated_at
+0    1032910  ... 2024-10-15 11:12:48.103220
+1    1151019  ... 2024-10-15 11:12:48.103220
+2    1151019  ... 2024-10-15 11:12:48.103220
+3    1151019  ... 2024-10-15 11:12:48.103220
+4    1151019  ... 2024-10-15 11:12:48.103220
+
+[5 rows x 76 columns]
+[2024-10-15T11:12:48.740+0000] {logging_mixin.py:149} INFO - Processing of parquet file ./data/GOLD/fmcsa_company_data/fmcsa_company_data.parquet completed.
+[2024-10-15T11:12:48.741+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-10-15T11:12:48.755+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=clever_main_DAG, task_id=upload_to_postgres, execution_date=20241015T023924, start_date=20241015T111244, end_date=20241015T111248
+[2024-10-15T11:12:48.821+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2024-10-15T11:12:48.848+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

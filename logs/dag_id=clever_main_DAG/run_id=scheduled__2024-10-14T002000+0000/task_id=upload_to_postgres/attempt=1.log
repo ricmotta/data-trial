@@ -1,0 +1,123 @@
+[2024-10-15T04:55:51.603+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clever_main_DAG.upload_to_postgres scheduled__2024-10-14T00:20:00+00:00 [queued]>
+[2024-10-15T04:55:51.617+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clever_main_DAG.upload_to_postgres scheduled__2024-10-14T00:20:00+00:00 [queued]>
+[2024-10-15T04:55:51.618+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 2
+[2024-10-15T04:55:51.635+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): upload_to_postgres> on 2024-10-14 00:20:00+00:00
+[2024-10-15T04:55:51.644+0000] {standard_task_runner.py:57} INFO - Started process 4490 to run task
+[2024-10-15T04:55:51.648+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'clever_main_DAG', 'upload_to_postgres', 'scheduled__2024-10-14T00:20:00+00:00', '--job-id', '19', '--raw', '--subdir', 'DAGS_FOLDER/clever_main_DAG.py', '--cfg-path', '/tmp/tmpu6ulyi2b']
+[2024-10-15T04:55:51.650+0000] {standard_task_runner.py:85} INFO - Job 19: Subtask upload_to_postgres
+[2024-10-15T04:55:51.711+0000] {task_command.py:410} INFO - Running <TaskInstance: clever_main_DAG.upload_to_postgres scheduled__2024-10-14T00:20:00+00:00 [running]> on host 0d4cebb48579
+[2024-10-15T04:55:51.804+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='alec.ventura, ricardo.motta' AIRFLOW_CTX_DAG_ID='clever_main_DAG' AIRFLOW_CTX_TASK_ID='upload_to_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-10-14T00:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-14T00:20:00+00:00'
+[2024-10-15T04:55:51.806+0000] {logging_mixin.py:149} INFO - Processing parquet file: ./data/GOLD/real_estate_agents_classified/real_estate_agents_classified.parquet
+[2024-10-15T04:55:51.891+0000] {logging_mixin.py:149} INFO - Parquet file read successfully. Number of rows: 2864, Number of columns: 72
+[2024-10-15T04:55:51.894+0000] {logging_mixin.py:149} INFO - Data types of the columns in the DataFrame:
+google_id             object
+name                  object
+site                  object
+subtypes              object
+type                  object
+                      ...   
+review_likes           Int64
+rating_scaled        float64
+reviews_scaled       float64
+photos_scaled        float64
+performance_score    float64
+Length: 72, dtype: object
+[2024-10-15T04:55:51.896+0000] {logging_mixin.py:149} INFO - Checking if table google_agents_data exists...
+[2024-10-15T04:55:51.958+0000] {logging_mixin.py:149} INFO - Table google_agents_data does not exist. Creating the table.
+[2024-10-15T04:55:51.959+0000] {logging_mixin.py:149} INFO - Inferring SQL schema for table: google_agents_data
+[2024-10-15T04:55:51.963+0000] {logging_mixin.py:149} INFO - SQL schema inferred: 
+CREATE TABLE IF NOT EXISTS google_agents_data (
+    google_id TEXT,
+    name TEXT,
+    site TEXT,
+    subtypes TEXT,
+    type TEXT,
+    category TEXT,
+    phone TEXT,
+    full_address TEXT,
+    borough TEXT,
+    street TEXT,
+    city TEXT,
+    postal_code TEXT,
+    state TEXT,
+    us_state TEXT,
+    country TEXT,
+    country_code TEXT,
+    latitude DECIMAL,
+    longitude DECIMAL,
+    time_zone TEXT,
+    plus_code TEXT,
+    area_service BOOLEAN,
+    rating DECIMAL,
+    reviews_link TEXT,
+    reviews_tags TEXT,
+    photo TEXT,
+    photos_count INTEGER,
+    street_view TEXT,
+    located_in TEXT,
+    working_hours TEXT,
+    working_hours_old_format TEXT,
+    other_hours TEXT,
+    business_status TEXT,
+    about TEXT,
+    range TEXT,
+    posts TEXT,
+    logo TEXT,
+    description TEXT,
+    verified TEXT,
+    owner_id TEXT,
+    owner_title TEXT,
+    owner_link TEXT,
+    booking_appointment_link TEXT,
+    order_links TEXT,
+    location_link TEXT,
+    place_id TEXT,
+    cid TEXT,
+    reviews_id TEXT,
+    located_google_id TEXT,
+    reviews TEXT,
+    review_id TEXT,
+    review_pagination_id TEXT,
+    author_link TEXT,
+    author_title TEXT,
+    author_id TEXT,
+    author_image TEXT,
+    author_reviews_count INTEGER,
+    review_text TEXT,
+    review_img_url TEXT,
+    review_img_urls TEXT,
+    review_photo_ids TEXT,
+    owner_answer TEXT,
+    owner_answer_timestamp TEXT,
+    owner_answer_timestamp_datetime_utc TIMESTAMP,
+    review_link TEXT,
+    review_rating INTEGER,
+    review_timestamp TEXT,
+    review_datetime_utc TIMESTAMP,
+    review_likes INTEGER,
+    rating_scaled DECIMAL,
+    reviews_scaled DECIMAL,
+    photos_scaled DECIMAL,
+    performance_score DECIMAL,
+    updated_at TIMESTAMP
+);
+[2024-10-15T04:55:51.964+0000] {logging_mixin.py:149} INFO - Running SQL command to create or modify the table...
+[2024-10-15T04:55:52.020+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/scripts/database_operations/main.py", line 6, in main
+    process_parquet_to_postgres('./data/GOLD/real_estate_agents_classified/real_estate_agents_classified.parquet', 'google_agents_data', engine)
+  File "/opt/airflow/dags/scripts/database_operations/utils/parquet_processing.py", line 20, in process_parquet_to_postgres
+    upsert_to_postgres(df, table_name, gold_file_mtime, engine)
+  File "/opt/airflow/dags/scripts/database_operations/utils/upsert.py", line 24, in upsert_to_postgres
+    run_sql(create_table_sql)
+  File "/opt/airflow/dags/scripts/database_operations/utils/db_operations.py", line 27, in run_sql
+    conn.commit()
+AttributeError: 'Connection' object has no attribute 'commit'
+[2024-10-15T04:55:52.048+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=clever_main_DAG, task_id=upload_to_postgres, execution_date=20241014T002000, start_date=20241015T045551, end_date=20241015T045552
+[2024-10-15T04:55:52.063+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 19 for task upload_to_postgres ('Connection' object has no attribute 'commit'; 4490)
+[2024-10-15T04:55:52.101+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2024-10-15T04:55:52.136+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

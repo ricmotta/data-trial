@@ -1,0 +1,49 @@
+[2024-10-15T03:40:18.572+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clever_main_DAG.process_bronze_to_silver scheduled__2024-10-14T00:20:00+00:00 [queued]>
+[2024-10-15T03:40:18.589+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clever_main_DAG.process_bronze_to_silver scheduled__2024-10-14T00:20:00+00:00 [queued]>
+[2024-10-15T03:40:18.590+0000] {taskinstance.py:1308} INFO - Starting attempt 4 of 5
+[2024-10-15T03:40:18.626+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): process_bronze_to_silver> on 2024-10-14 00:20:00+00:00
+[2024-10-15T03:40:18.637+0000] {standard_task_runner.py:57} INFO - Started process 3082 to run task
+[2024-10-15T03:40:18.642+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'clever_main_DAG', 'process_bronze_to_silver', 'scheduled__2024-10-14T00:20:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/clever_main_DAG.py', '--cfg-path', '/tmp/tmpbioom_57']
+[2024-10-15T03:40:18.645+0000] {standard_task_runner.py:85} INFO - Job 12: Subtask process_bronze_to_silver
+[2024-10-15T03:40:18.729+0000] {task_command.py:410} INFO - Running <TaskInstance: clever_main_DAG.process_bronze_to_silver scheduled__2024-10-14T00:20:00+00:00 [running]> on host 0d4cebb48579
+[2024-10-15T03:40:18.867+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='alec.ventura, ricardo.motta' AIRFLOW_CTX_DAG_ID='clever_main_DAG' AIRFLOW_CTX_TASK_ID='process_bronze_to_silver' AIRFLOW_CTX_EXECUTION_DATE='2024-10-14T00:20:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-10-14T00:20:00+00:00'
+[2024-10-15T03:40:18.872+0000] {logging_mixin.py:149} INFO - Performing processing for entity: company_profiles_google_maps
+[2024-10-15T03:40:19.872+0000] {logging_mixin.py:149} INFO - Columns deleted (all rows null): ['popular_times', 'typical_time_spent', 'reservation_links', 'menu_link']
+[2024-10-15T03:40:19.879+0000] {logging_mixin.py:149} INFO - Total columns deleted: 4
+[2024-10-15T03:40:19.981+0000] {logging_mixin.py:149} INFO - Total empty or duplicate rows removed: 0
+[2024-10-15T03:40:20.276+0000] {logging_mixin.py:149} INFO - Comparing BRONZE modified at 2024-10-10 11:58:21 with SILVER last updated at 2024-10-15 03:16:11.218075
+[2024-10-15T03:40:20.276+0000] {logging_mixin.py:149} INFO - No update needed. BRONZE data is older or equal to SILVER's last update.
+[2024-10-15T03:40:20.652+0000] {logging_mixin.py:149} INFO - Performing processing for entity: customer_reviews_google
+[2024-10-15T03:40:23.678+0000] {logging_mixin.py:149} INFO - Columns deleted (all rows null): ['review_questions']
+[2024-10-15T03:40:23.684+0000] {logging_mixin.py:149} INFO - Total columns deleted: 1
+[2024-10-15T03:40:23.812+0000] {logging_mixin.py:149} INFO - Total empty or duplicate rows removed: 0
+[2024-10-15T03:40:26.479+0000] {logging_mixin.py:149} INFO - Comparing BRONZE modified at 2024-10-10 11:58:21 with SILVER last updated at 2024-10-15 03:16:14.447624
+[2024-10-15T03:40:26.479+0000] {logging_mixin.py:149} INFO - No update needed. BRONZE data is older or equal to SILVER's last update.
+[2024-10-15T03:40:26.805+0000] {logging_mixin.py:149} INFO - Performing processing for entity: fmcsa_companies
+[2024-10-15T03:40:26.866+0000] {logging_mixin.py:149} INFO - Columns deleted (all rows null): []
+[2024-10-15T03:40:26.867+0000] {logging_mixin.py:149} INFO - Total columns deleted: 0
+[2024-10-15T03:40:26.875+0000] {logging_mixin.py:149} INFO - Total empty or duplicate rows removed: 0
+[2024-10-15T03:40:26.921+0000] {logging_mixin.py:149} INFO - Comparing BRONZE modified at 2024-10-10 11:58:21 with SILVER last updated at 2024-10-15 03:16:14.535780
+[2024-10-15T03:40:26.922+0000] {logging_mixin.py:149} INFO - No update needed. BRONZE data is older or equal to SILVER's last update.
+[2024-10-15T03:40:26.943+0000] {logging_mixin.py:149} INFO - Performing processing for entity: fmcsa_company_snapshot
+[2024-10-15T03:40:26.990+0000] {logging_mixin.py:149} INFO - Columns deleted (all rows null): []
+[2024-10-15T03:40:26.992+0000] {logging_mixin.py:149} INFO - Total columns deleted: 0
+[2024-10-15T03:40:27.000+0000] {logging_mixin.py:149} INFO - Total empty or duplicate rows removed: 0
+[2024-10-15T03:40:27.036+0000] {logging_mixin.py:149} INFO - Comparing BRONZE modified at 2024-10-10 11:58:21 with SILVER last updated at 2024-10-15 03:16:14.622324
+[2024-10-15T03:40:27.037+0000] {logging_mixin.py:149} INFO - No update needed. BRONZE data is older or equal to SILVER's last update.
+[2024-10-15T03:40:27.065+0000] {logging_mixin.py:149} INFO - Performing processing for entity: fmcsa_complaints
+[2024-10-15T03:40:27.099+0000] {logging_mixin.py:149} INFO - Columns deleted (all rows null): ['user_updated', 'date_updated']
+[2024-10-15T03:40:27.100+0000] {logging_mixin.py:149} INFO - Total columns deleted: 2
+[2024-10-15T03:40:27.105+0000] {logging_mixin.py:149} INFO - Total empty or duplicate rows removed: 0
+[2024-10-15T03:40:27.127+0000] {logging_mixin.py:149} INFO - Comparing BRONZE modified at 2024-10-12 13:30:32 with SILVER last updated at 2024-10-15 03:16:14.679964
+[2024-10-15T03:40:27.128+0000] {logging_mixin.py:149} INFO - No update needed. BRONZE data is older or equal to SILVER's last update.
+[2024-10-15T03:40:27.143+0000] {logging_mixin.py:149} INFO - Performing processing for entity: fmcsa_safer_data
+[2024-10-15T03:40:27.204+0000] {logging_mixin.py:149} INFO - Columns deleted (all rows null): ['state_carrier_id_number', 'us_iep_natl_avg_oos_pct']
+[2024-10-15T03:40:27.205+0000] {logging_mixin.py:149} INFO - Total columns deleted: 2
+[2024-10-15T03:40:27.223+0000] {logging_mixin.py:149} INFO - Total empty or duplicate rows removed: 0
+[2024-10-15T03:40:27.290+0000] {logging_mixin.py:149} INFO - Comparing BRONZE modified at 2024-10-10 11:58:21 with SILVER last updated at 2024-10-15 03:16:14.819372
+[2024-10-15T03:40:27.291+0000] {logging_mixin.py:149} INFO - No update needed. BRONZE data is older or equal to SILVER's last update.
+[2024-10-15T03:40:27.325+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-10-15T03:40:27.339+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=clever_main_DAG, task_id=process_bronze_to_silver, execution_date=20241014T002000, start_date=20241015T034018, end_date=20241015T034027
+[2024-10-15T03:40:27.394+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2024-10-15T03:40:27.440+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check
