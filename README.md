@@ -13,6 +13,7 @@ The pipeline follows a Lakehouse approach:
 - **Bronze**: Raw CSV files in their original structure, organized by entity and ingestion date (`data/BRONZE/{entity}/{date}/file.csv`).
 - **Silver**: Cleaned and validated data. It handles malformed rows, removes duplicates and nulls, enforces typing, and applies data quality checks. Output is stored as `.parquet` files.
 - **Gold**: Joined and curated datasets enriched with business logic. Stored in **PostgreSQL** tables, with UPSERT logic using a control field `updated_at`.
+![Lakehouse Architecture Diagram](docs/clever-architecture.png)
 
 ---
 
@@ -144,5 +145,15 @@ dags/
 
 ## Final Objective
 
-Turn fragmented raw datasets about moving companies into **validated**, **standardized**, and **integrated** datasets, enabling localized and personalized insights for the real estate sector.
+Transform fragmented and inconsistent raw data about real estate agents and moving companies into a robust, trusted, and analytics-ready data infrastructure using a Lakehouse approach.
+
+The pipeline enables:
+
+- **Location-based insights** into agent performance and customer satisfaction across cities and states.
+- **Data-driven ranking** of agents and agencies based on key performance indicators (ratings, reviews, photo engagement).
+- **Sentiment analysis** of customer reviews to uncover trends in satisfaction and service quality.
+- **Identification of top-performing agents**, underperformers, and improvement opportunities.
+- **Personalized content generation** for real estate consumers and stakeholders based on geographical and performance-related factors.
+
+This architecture empowers teams to make informed, localized decisions backed by structured and validated data — unlocking business value in the real estate sector through clarity, context, and precision.
 
