@@ -99,6 +99,23 @@ docker-compose up --build
 
 ---
 
+## Data Analysis
+![Analysis Image Example](docs/clever-analysis-image.png)
+
+The notebook is available at: 🔗 [View the notebook on GitHub](https://github.com/ricmotta/data-trial/blob/main/notebooks/real_state_analysis.ipynb)
+
+The goal of this analysis is to extract meaningful insights from the curated `gold_google_agents_data` dataset stored in PostgreSQL. Using Python (Pandas, Seaborn, Matplotlib and TextBlob), the notebook explores:
+
+- **Geographical trends** in agent distribution and satisfaction
+- **Performance score ranking** of agents based on ratings, reviews, and photo engagement
+- **Sentiment classification** of customer reviews (positive, neutral, negative)
+- **City-by-city comparisons** of rating distributions and agent behavior
+- **Heatmaps and visual dashboards** to reveal high-activity zones in the U.S.
+
+This notebook showcases how a well-structured data pipeline can support actionable business intelligence and localized content strategies in the real estate industry.
+
+---
+
 ## Project Structure
 
 ```text
