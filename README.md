@@ -122,7 +122,7 @@ dags/
 └── docker-compose.yaml
 ```
 
-## Core Strengths
+## Key Features and Benefits
 
 - **Modular, layered architecture**: Clear separation of responsibilities by processing stage (Bronze, Silver, Gold)
 - **Automated data validation**: With `Great Expectations`, ensuring schema consistency and quality
@@ -133,7 +133,7 @@ dags/
 
 ---
 
-## Future Improvements
+## Improvement Possibilities
 
 - **PySpark integration** for large-scale data handling
 - **Delta Lake support** for versioning and historical data snapshots
@@ -143,7 +143,7 @@ dags/
 
 ---
 
-## Final Objective
+## Project Purpose and Impact
 
 Transform fragmented and inconsistent raw data about real estate agents and moving companies into a robust, trusted, and analytics-ready data infrastructure using a Lakehouse approach.
 
